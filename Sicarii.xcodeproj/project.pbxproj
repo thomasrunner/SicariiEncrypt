@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E977271722F1EFA700DB2114 /* SicariiEncrypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E977271522F1EF9C00DB2114 /* SicariiEncrypt.framework */; };
+		E977271822F1EFA700DB2114 /* SicariiEncrypt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E977271522F1EF9C00DB2114 /* SicariiEncrypt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E99BCA9522E55C3E002E62D2 /* pantheon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E99BCA9322E55C3E002E62D2 /* pantheon.jpg */; };
 		E99BCA9622E55C3E002E62D2 /* declaration_of_independence.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E99BCA9422E55C3E002E62D2 /* declaration_of_independence.jpg */; };
 		E99BCA9822E563CA002E62D2 /* M654.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E99BCA9722E563CA002E62D2 /* M654.pdf */; };
@@ -15,8 +17,6 @@
 		E9A29CC6228BA8640053AB74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A29CC4228BA8640053AB74 /* Main.storyboard */; };
 		E9A29CC8228BA8650053AB74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9A29CC7228BA8650053AB74 /* Assets.xcassets */; };
 		E9A29CCB228BA8650053AB74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A29CC9228BA8650053AB74 /* LaunchScreen.storyboard */; };
-		E9F82AE922F1343C00838A41 /* SicariiEncrypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F82AE722F1343900838A41 /* SicariiEncrypt.framework */; };
-		E9F82AEA22F1343C00838A41 /* SicariiEncrypt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9F82AE722F1343900838A41 /* SicariiEncrypt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E9F82AEA22F1343C00838A41 /* SicariiEncrypt.framework in Embed Frameworks */,
+				E977271822F1EFA700DB2114 /* SicariiEncrypt.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E977271522F1EF9C00DB2114 /* SicariiEncrypt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SicariiEncrypt.framework; sourceTree = "<group>"; };
 		E99BCA9322E55C3E002E62D2 /* pantheon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pantheon.jpg; sourceTree = "<group>"; };
 		E99BCA9422E55C3E002E62D2 /* declaration_of_independence.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = declaration_of_independence.jpg; sourceTree = "<group>"; };
 		E99BCA9722E563CA002E62D2 /* M654.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = M654.pdf; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		E9A29CC7228BA8650053AB74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9A29CCA228BA8650053AB74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9A29CCC228BA8650053AB74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9F82AE722F1343900838A41 /* SicariiEncrypt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SicariiEncrypt.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9F82AE922F1343C00838A41 /* SicariiEncrypt.framework in Frameworks */,
+				E977271722F1EFA700DB2114 /* SicariiEncrypt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 		E9C719A422F1248F0063D184 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E9F82AE722F1343900838A41 /* SicariiEncrypt.framework */,
+				E977271522F1EF9C00DB2114 /* SicariiEncrypt.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
