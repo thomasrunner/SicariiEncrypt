@@ -1,0 +1,11 @@
+framework module SicariiEncrypt {
+  umbrella header "SicariiEncrypt.h"
+
+  export *
+  module * { export * }
+}
+
+module SicariiEncrypt.Swift {
+    header "SicariiEncrypt-Swift.h"
+    requires objc
+}
