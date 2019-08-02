@@ -12,8 +12,19 @@ import SicariiEncrypt
 
 class SicariiViewController: UIViewController {
     
+    @IBOutlet weak var passcodeTextView: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func passcodeButton(_ sender: Any) {
+        let array: [UInt8] = buildFileArray()
+        let sicarii: SicariiCipher = SicariiCipher()
+        let encrypted = sicarii.encrypt(ary: array, passcode: passcodeTextView.text ?? "")
+        let decrypted = sicarii.decrypt(ary: encrypted, passcode: passcodeTextView.text ?? "")
+        print("key/model encrypted: \(array != encrypted)")
+        print("key/model decrypted: \(array == decrypted)")
     }
     
     @IBAction func encryptButton(_ sender: Any) {
@@ -47,6 +58,7 @@ class SicariiViewController: UIViewController {
     
     func buildRandomArray() -> [UInt8] {
         //Get Array Size no Validation in Demo
+        //Must be greater than 128 chars
         var array: [UInt8] = []
         let arraySize = 129
         for _ in 0..<arraySize {
@@ -59,11 +71,6 @@ class SicariiViewController: UIViewController {
     func bytesFromFile(filePath: String, ext: String) -> [UInt8]? {
         if let url = Bundle.main.url(forResource: filePath, withExtension: ext) {
             let data = try? Data(contentsOf: url, options:.mappedRead)
-            //        let myImage: UIImage = UIImage.init(named: filePath) ?? UIImage()
-            //            let data = myImage.cgImage?.dataProvider?.data as Data?
-            //        let data: Data = myImage.jpegData(compressionQuality: 1)!
-            // new constructor:
-            //            let data: Data = try! Data.init(contentsOf: url)
             return data?.withUnsafeBytes({
                 [UInt8](UnsafeBufferPointer(start: $0, count: data?.count ?? 0))
             })
