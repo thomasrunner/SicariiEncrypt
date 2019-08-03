@@ -1,16 +1,17 @@
-# SicariiEncrypt v0.3
+# SicariiEncrypt v0.4
 Sicarii is a prototype cryptographic swift cipher framework library which requires a minimum enviroment of swift 5 with iOS 12.2.
 
     v0.1 - Initial commit
     v0.2 - Bug fixed nad updated README
     v0.3 - Added passcode support and fixed a custom model bug.
+    v0.4 - Hardened passcode to key conversion to generate more unique keys.
 
 # Detail
 Sicarii cipher can use either a key & model, key, passcode or passcode with model encryption. The key generated is a 8192 bit array and the model generated is a 4096 bit array. The passcode used must be at least 8 chars long.
 
     Encryption is achieved via constant multi directional dynamic transformations to ensure no simple substitution is applied.
     
-    Passcode to key creation is achieved by a combination of dynamic salting+(char expansion)x2+data transformations+sorting+normalization
+    Passcode to key creation is achieved by a combination of (dynamic salting)+(char expansion)x2+(constant multi directional data transformations)+(sorting)+(normalization)x2
 
 
 **YOU CAN FIND THE FRAMEWORK LOCATED IN THE PROJECT**
